@@ -2,7 +2,7 @@
 name: scout
 description: Fast codebase recon that returns compressed context for handoff
 aliases: explore, explorer
-tools: read, grep, find, fzf, ls, bash, write
+tools: read, grep, find, ls, bash, write
 thinking: low
 systemPromptMode: replace
 inheritProjectContext: true
