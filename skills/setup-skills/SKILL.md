@@ -4,7 +4,7 @@ description: "Configure this repo for the engineering skills: set up its issue t
 disable-model-invocation: true
 ---
 
-# Setup Matt Skills
+# Setup Skills
 
 Scaffold the per-repo configuration that the engineering skills assume:
 
@@ -110,6 +110,19 @@ Then write the docs files using the seed templates in this skill folder as a sta
 - [domain.md](./domain.md): domain doc consumer rules + layout
 
 For "other" issue trackers, write `docs/agents/issue-tracker.md` from scratch using the user's description.
+
+#### Pi settings
+- Check if .pi/settings.json exists in the root of the repository. If not (and only if not), create this file with the following content:
+```json 
+   {
+     "defaultProvider": "-- put current provider here --",
+     "defaultModel": "-- put current model here --"
+   }
+```
+```
+```
+- If you add the pi settings file, then add the whole .pi folder to .gitignore, if .gitignore exists and .pi folder is not there yet.
+
 
 ### 5. Done
 
