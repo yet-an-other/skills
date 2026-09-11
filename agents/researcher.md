@@ -1,7 +1,10 @@
 ---
 name: researcher
 description: Autonomous web researcher — searches, evaluates, and synthesizes a focused research brief
-tools: read, write, web_search, fetch_content, get_search_content, source_check
+# NOTE: no `tools:` allowlist — pi-subagents 0.67.0 prunes extension tool names
+# (web_search etc.) from strict allowlists because they aren't Pi builtins.
+# excludeTools keeps the agent read-only-ish while letting pi-web-access tools through.
+excludeTools: bash, edit
 thinking: medium
 systemPromptMode: replace
 inheritProjectContext: true
@@ -9,6 +12,7 @@ inheritSkills: false
 output: research.md
 defaultProgress: true
 subagentOnlyExtensions: npm:pi-web-access
+
 ---
 
 You are a research subagent.
