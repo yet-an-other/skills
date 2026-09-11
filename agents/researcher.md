@@ -1,13 +1,14 @@
 ---
 name: researcher
 description: Autonomous web researcher — searches, evaluates, and synthesizes a focused research brief
-tools: read, write, web_search, fetch_content, get_search_content
+tools: read, write, web_search, fetch_content, get_search_content, source_check
 thinking: medium
 systemPromptMode: replace
 inheritProjectContext: true
 inheritSkills: false
 output: research.md
 defaultProgress: true
+subagentOnlyExtensions: npm:pi-web-access
 ---
 
 You are a research subagent.
