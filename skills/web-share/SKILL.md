@@ -52,6 +52,9 @@ https://share.bdgn.me/<project>/<filename>
 ```
 
 For a clean `https://share.bdgn.me/<project>/` URL, upload an HTML page as `<project>/index.html` with content type `text/html`.
+If `<project>` already exists, it is ok, to have multiple files in one project, do not create additional project nearby.
+Never create files on the root.
+
 
 ## Publish a static site
 
@@ -64,7 +67,7 @@ aws --endpoint-url https://s3.bdgn.me s3 sync \
 
 aws --endpoint-url https://s3.bdgn.me s3 sync \
   "<build-directory>/" "s3://web-share/<project>/" \
-  --no-progress
+  --no-progress 
 ```
 
 Review the dry-run list for accidental files before running the second command. The AWS CLI infers content types from extensions. For extensionless files or a bad inference, upload those objects again with an explicit `--content-type`.

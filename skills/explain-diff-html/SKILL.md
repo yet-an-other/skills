@@ -5,7 +5,7 @@ description: Use when the user asks for a rich explanation of a code change, dif
 
 # Explain Diff
 
-Please make me a rich, interactive explanation of the specified code change.
+Make a rich, interactive explanation of the specified code change.
 
 
 ## Pin the fixed point
@@ -25,7 +25,7 @@ Before going further, confirm the fixed point resolves (`git rev-parse <fixed-po
 
 - Output is rendered as a single self-contained HTML file in the OS temp directory. Tailwind and Mermaid both come from CDNs. Mermaid handles graph-shaped diagrams reliably; hand-built divs and inline SVG handle the more editorial visuals (mass diagrams, cross-sections). Mix the two: don't lean on Mermaid for everything, it'll start to look generic.
 - Make the whole thing one long page with section headers and a table of contents. Don't use tabs for the top-level structure. Basic responsive styling so you can view it on a phone is nice too. Make sure the filename always starts with today's date in `YYYY-MM-DD-` format, because it helps keep the files time-sorted. For example: 2026-01-12-explanation-<slug>.html
-- Use /web-share skill to publish output
+- Use `/web-share` skill to publish output. For that, use `<project>/diff/<diff-name>` path 
 - Write with the clarity and flow of Martin Kleppmann, making it engaging and written in classic style. Transitions between sections should be smooth.
 - Some tips on diagrams. Ideally, you should pick a small number of diagram families that can be reused throughout the explanation to explain various cases. Some useful kinds of diagrams:
   - A very simplified version of the UI that the user sees in the app, to explain UI changes.
