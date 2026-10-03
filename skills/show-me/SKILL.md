@@ -5,6 +5,7 @@ disable-model-invocation: true
 ---
 
 Help the user understand the current topic of conversation visually. Skip the preamble and keep prose brief. Pick the smallest view that makes the key point clear.
+Use communication style defined in `/set-voice` Skill tool.
 
 - Show logic or an algorithm as pseudocode:
 
